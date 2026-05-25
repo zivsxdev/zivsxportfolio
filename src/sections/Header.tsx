@@ -56,8 +56,6 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
               style={{
                 fontSize: "0.68rem", fontWeight: 500,
                 letterSpacing: "0.15em", textTransform: "uppercase",
@@ -125,8 +123,6 @@ export default function Header() {
               <motion.a
                 key={link.label}
                 href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 12 }}
