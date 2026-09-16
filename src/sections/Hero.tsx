@@ -165,8 +165,8 @@ export default function Hero() {
                 textAlign: "right",
               }}
             >
-              Building digital experiences at the intersection of clean code and
-              considered design.
+              SAP ABAP and FrontEnd Developer — building fast,
+            purposeful digital products from Chhattisgarh, India.
             </p>
             <motion.a href="#projects" style={linkStyle}>
               View Work
@@ -219,7 +219,7 @@ export default function Hero() {
           paddingTop: "1rem",
         }}
       >
-        {["Software Dev", "Trader", "Creative Tech"].map(
+        {["SAP ABAP", "FrontEnd Dev", "Trader", "Creative Tech"].map(
           (label) => (
             <span key={label} className="label-sm" style={{ opacity: 0.45 }}>
               {label}

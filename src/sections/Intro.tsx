@@ -38,38 +38,35 @@ export default function Intro() {
         — ABOUT
       </motion.p>
 
-      {/* MOBILE: single column. MD+: 3 columns */}
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "1fr",
-        gap: "3rem",
-      }}
+      <div
+        style={{ display: "grid", gridTemplateColumns: "1fr", gap: "3rem" }}
         className="md:!grid-cols-3 md:!gap-16"
       >
         {/* Col 1: Photo + contact */}
         <motion.div {...fade(0.05)}>
           <div className="img-zoom" style={{
-            width: "100%",
-            maxWidth: "320px",
-            aspectRatio: "3/4",
-            overflow: "hidden",
-            marginBottom: "1.5rem",
-            background: "#d5d2cd",
+            width: "100%", maxWidth: "320px",
+            aspectRatio: "3/4", overflow: "hidden",
+            marginBottom: "1.5rem", background: "#d5d2cd",
             position: "relative",
           }}>
-            <Image src="/hero-img4.jpg" alt="zivsxdev" fill
+            <Image src="/hero-img4.jpg" alt="Taukil Ahmed" fill
               style={{ objectFit: "cover", filter: "grayscale(20%)" }} />
           </div>
+
           <p style={{ fontSize: "1.3rem", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "0.2rem" }}>
-            zivsxdev
+            Taukil Ahmed
           </p>
           <p className="label-sm" style={{ opacity: 0.45, marginBottom: "1.25rem" }}>
-            Software Developer
+            SAP ABAP Developer · Full-Stack Engineer
           </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
             {[
+              { label: "Email", val: "zivsxdev@gmail.com", href: "mailto:zivsxdev@gmail.com" },
+              { label: "Phone", val: "+91 9407921078" },
               { label: "GitHub", val: "github.com/zivsxdev", href: "https://github.com/zivsxdev" },
-              { label: "Location", val: "Raipur, India" },
+              { label: "Location", val: "Korba, Chhattisgarh, India" },
             ].map(({ label, val, href }) => (
               <div key={label} style={{ display: "flex", gap: "1rem", alignItems: "baseline", flexWrap: "wrap" }}>
                 <span className="label-sm" style={{ opacity: 0.38, minWidth: "65px" }}>{label}</span>
@@ -82,42 +79,74 @@ export default function Intro() {
           </div>
         </motion.div>
 
-        {/* Col 2: Bio + experience */}
+        {/* Col 2: Bio + experience + education */}
         <motion.div {...fade(0.1)}>
           <p style={{ fontSize: "clamp(0.82rem, 2vw, 0.95rem)", lineHeight: 1.75, opacity: 0.72, marginBottom: "2.5rem" }}>
-            I build full-stack applications that are fast, accessible, and carefully crafted.
-            My work sits at the boundary of engineering precision and visual thinking —
-            writing clean code while obsessing over the details that make interfaces feel alive.
+            SAP ABAP Developer with hands-on training in report development, SmartForms, and RFC/BAPI integration,
+            backed by a full-stack engineering foundation in React, Next.js, Node.js, and TypeScript. Brings three years
+            of operations leadership from the automotive industry into enterprise SAP environments — combining fast
+            technical ramp-up with proven business execution.
           </p>
+
           <Section label="EXPERIENCE">
             {[
-              { role: "Sales Manager", co: "AutoMobile parts", period: "2022 — 2024" },
-              { role: "Software Developer", co:"", period: "2024 — Ongoing" },
-              { role: "Trader", co: "Independent", period: "2021 — Ongoing" },
-             
-            ].map(({ role, co, period }) => (
-              <div key={role} style={{ marginBottom: "1.1rem" }}>
+              {
+                role: "SAP ABAP Development Training",
+                co: "Remote — Noida",
+                period: "May 2026 — Ongoing",
+                points: [
+                  "ALV, Classical & Interactive reports on Purchase Order data",
+                  "SmartForms with custom print programs and TOP includes",
+                  "RFC-enabled function modules for VBAK/VBAP & BKPF data",
+                ]
+              },
+              {
+                role: "Automotive Business Operations Executive",
+                co: "Khush Automobiles",
+                period: "2022 — 2025",
+                points: [
+                  "End-to-end dealership ops — sales, inventory, team coordination",
+                  "Completed AlmaBetter Full Stack certification concurrently",
+                ]
+              },
+              {
+                role: "Independent Trader",
+                co: "Self-directed",
+                period: "2021 — Ongoing",
+                points: []
+              },
+            ].map(({ role, co, period, points }) => (
+              <div key={role} style={{ marginBottom: "1.5rem" }}>
                 <p style={{ fontWeight: 700, fontSize: "0.83rem" }}>{role}</p>
                 <p style={{ fontSize: "0.73rem", opacity: 0.52 }}>{co}</p>
-                <p className="label-sm" style={{ opacity: 0.3, marginTop: "0.1rem" }}>{period}</p>
+                <p className="label-sm" style={{ opacity: 0.3, marginTop: "0.1rem", marginBottom: points.length ? "0.5rem" : 0 }}>{period}</p>
+                {points.map((pt) => (
+                  <p key={pt} style={{ fontSize: "0.7rem", opacity: 0.55, lineHeight: 1.6, paddingLeft: "0.75rem", borderLeft: "1px solid rgba(13,13,13,0.15)", marginBottom: "0.25rem" }}>
+                    {pt}
+                  </p>
+                ))}
               </div>
             ))}
           </Section>
+
           <Section label="EDUCATION">
-            <p style={{ fontWeight: 700, fontSize: "0.83rem" }}>Mechanical Engineering</p>
-            <p style={{ fontSize: "0.73rem", opacity: 0.52 }}>VEC Ambikapur (CSVTU)</p>
-            <p className="label-sm" style={{ opacity: 0.3, marginTop: "0.1rem" }}>2022</p>
-            <p style={{ fontWeight: 700, fontSize: "0.83rem" }}>Full-Stack Developer</p>
-            <p style={{ fontSize: "0.73rem", opacity: 0.52 }}>Almabetter</p>
-            <p className="label-sm" style={{ opacity: 0.3, marginTop: "0.1rem" }}>2025</p>
-            <p style={{ fontWeight: 700, fontSize: "0.83rem" }}>TCS-NQT(IT)</p>
-            <p style={{ fontSize: "0.73rem", opacity: 0.52 }}>Score: 1955.84 </p>
-            <p style={{ fontSize: "0.73rem", opacity: 0.52 }}>Adv, Quant/Reasoning: 66.5%, Python: 57% </p>
-            <p className="label-sm" style={{ opacity: 0.3, marginTop: "0.1rem" }}>2026 (FEB)</p>
+            {[
+              { degree: "B.Tech — Mechanical Engineering", inst: "VEC Ambikapur (CSVTU)", year: "2022" },
+              { degree: "Full Stack Development Certification", inst: "AlmaBetter", year: "2025" },
+              { degree: "SAP ABAP Development Training", inst: "Remote — Noida", year: "2026 (Ongoing)" },
+              { degree: "TCS iON NQT — IT", inst: "Score: 1955.84 / 3000 (65%)", year: "Feb 2026" },
+            ].map(({ degree, inst, year }) => (
+              <div key={degree} style={{ marginBottom: "1rem" }}>
+                <p style={{ fontWeight: 700, fontSize: "0.83rem" }}>{degree}</p>
+                <p style={{ fontSize: "0.73rem", opacity: 0.52 }}>{inst}</p>
+                <p className="label-sm" style={{ opacity: 0.3, marginTop: "0.1rem" }}>{year}</p>
+              </div>
+            ))}
           </Section>
+
           <Section label="LANGUAGES">
             <div style={{ display: "flex", gap: "1.5rem" }}>
-              {["English", "Hindi"].map((l) => (
+              {["English (Professional)", "Hindi (Native)"].map((l) => (
                 <p key={l} style={{ fontSize: "0.78rem", opacity: 0.68 }}>{l}</p>
               ))}
             </div>
@@ -126,23 +155,70 @@ export default function Intro() {
 
         {/* Col 3: Skills + tools */}
         <motion.div {...fade(0.15)}>
-          <Section label="CORE SKILLS">
-            {["Python","Next.js / React", "TypeScript", "Node.js / Express", "PostgreSQL", "TailwindCSS", "REST & GraphQL APIs","Problem Solving"].map((skill) => (
+          <Section label="SAP SKILLS">
+            {[
+              "ABAP Programming",
+              "Data Dictionary",
+              "Internal Tables & Work Areas",
+              "ALV / Classical / Interactive Reports",
+              "Module Pool Programming",
+              "SmartForms & Print Programs",
+              "BAPIs / Function Modules",
+              "RFC Integration",
+              "SAP HANA SQL Queries",
+            ].map((skill) => (
               <div key={skill} style={{
                 display: "flex", justifyContent: "space-between", alignItems: "center",
-                borderBottom: "1px solid rgba(13,13,13,0.09)", padding: "0.55rem 0",
+                borderBottom: "1px solid rgba(13,13,13,0.09)", padding: "0.5rem 0",
               }}>
                 <span style={{ fontSize: "0.78rem" }}>{skill}</span>
               </div>
             ))}
           </Section>
+
+          <Section label="FULL-STACK SKILLS">
+            {[
+              "Python",
+              "Next.js / React",
+              "TypeScript / JavaScript",
+              "Node.js / Express",
+              "PostgreSQL / MongoDB",
+              "TailwindCSS",
+              "REST & GraphQL APIs",
+              "OpenAI / Claude / Puter.js AI",
+              "Prompt Engineering",
+            ].map((skill) => (
+              <div key={skill} style={{
+                display: "flex", justifyContent: "space-between", alignItems: "center",
+                borderBottom: "1px solid rgba(13,13,13,0.09)", padding: "0.5rem 0",
+              }}>
+                <span style={{ fontSize: "0.78rem" }}>{skill}</span>
+              </div>
+            ))}
+          </Section>
+
           <Section label="TOOLS">
-            {["Figma — Intermediate", "VS Code — Advanced", "Git / GitHub — Advanced", "Vercel / Cloudflare", "Docker — Intermediate", "Linux"].map((t) => (
+            {[
+              "VS Code — Advanced",
+              "Git / GitHub — Advanced",
+              "Vercel / Netlify",
+              "Postman",
+              "Figma — Intermediate",
+              "Docker — Intermediate",
+              "JWT Auth",
+            ].map((t) => (
               <p key={t} style={{ fontSize: "0.73rem", opacity: 0.58, marginBottom: "0.3rem" }}>{t}</p>
             ))}
           </Section>
+
           <Section label="PERSONAL">
-            {["Self-directed learner", "Open-source contributor", "Detail-obsessed builder", "Fast iteration mindset"].map((t) => (
+            {[
+              "Self-directed fast learner",
+              "3 yrs operations leadership",
+              "Detail-obsessed builder",
+              "AI-assisted development",
+              "Fast iteration mindset",
+            ].map((t) => (
               <p key={t} style={{ fontSize: "0.73rem", opacity: 0.58, marginBottom: "0.28rem" }}>{t}</p>
             ))}
           </Section>

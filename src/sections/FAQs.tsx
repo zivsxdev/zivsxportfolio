@@ -5,28 +5,32 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    q: "What technologies are you currently focused on?",
-    a: "My primary focus is building modern web applications with Next.js, React, TypeScript, Node.js, and MongoDB. I enjoy creating fast, scalable, and user-friendly full-stack products."
+    q: "What are you currently focused on?",
+    a: "I'm currently doing hands-on SAP ABAP development training — building ALV reports, SmartForms, RFC-enabled function modules, and BAPI integrations in an SAP HANA environment. Alongside that I continue building full-stack web applications with Next.js, React, TypeScript, and Node.js.",
   },
   {
-    q: "Are you working with Artificial Intelligence?",
-    a: "Yes. I'm actively exploring AI-powered applications and integrating tools such as Gemini AI into real-world projects. My goal is to combine modern web development with practical AI solutions."
+    q: "What is your SAP ABAP experience?",
+    a: "I have built 15+ Z-programs covering Classical, Interactive, and ALV report types with drill-down navigation and PFSTATUS customization. I have also implemented SmartForms with custom print programs, and built RFC-enabled function modules for Sales Order (VBAK/VBAP) and Purchasing (BKPF) data — validated end-to-end for data integrity.",
   },
   {
-    q: "What is your experience with Python?",
-    a: "I use Python for problem solving, automation, and AI-related learning. I'm continuously improving my Python skills while exploring machine learning and AI development workflows."
+    q: "What is your full-stack development background?",
+    a: "I hold an AlmaBetter Full Stack Development certification (2025) and have built production-grade projects including an AI-powered social media automation platform, an AI resume analyzer with ATS scoring, and a grocery delivery platform — using React, Next.js, Node.js, Express, PostgreSQL, MongoDB, and various AI APIs.",
   },
   {
-    q: "Do you practice Data Structures and Algorithms?",
-    a: "Absolutely. I consistently practice DSA to strengthen my problem-solving abilities and prepare for technical interviews. I focus on writing efficient, optimized, and clean solutions."
+    q: "How did you transition from Automotive to Tech?",
+    a: "While working as an Automotive Business Operations Executive at Khush Automobiles from 2022 to 2025 — managing dealership operations, sales, and inventory — I completed the AlmaBetter Full Stack certification concurrently. That combination of business operations experience and engineering skills is something I bring into every technical role.",
   },
   {
-    q: "How do you stay up to date as a developer?",
-    a: "I learn continuously through hands-on projects, open-source contributions, technical documentation, and building real-world applications. Every project is an opportunity to improve my engineering skills."
+    q: "What AI tools and APIs have you worked with?",
+    a: "I have integrated OpenAI API, Claude API, and Puter.js AI into real projects. My AI resume analyzer delivers ATS optimization scores with sub-1-second processing, and my social media automation platform uses AI for content generation. I also actively use prompt engineering as part of my development workflow.",
   },
   {
-    q: "Why do you prefer Next.js?",
-    a: "Next.js provides an excellent developer experience with features like Server Components, App Router, API Routes, SEO optimization, and performance improvements. It's my preferred framework for modern web applications."
+    q: "What does your TCS NQT score reflect?",
+    a: "I scored 1955.84 out of 3000 (65%) on the TCS iON National Qualifier Test for IT in February 2026, with 66.5% in Advanced Quantitative Reasoning and 57% in Python. It reflects a solid foundation in problem solving and logical reasoning that I continue to build on.",
+  },
+  {
+    q: "Are you open to opportunities?",
+    a: "Yes — I am actively targeting SAP ABAP Developer roles where I can apply my ABAP training alongside my full-stack and business operations background. I am also open to full-stack engineering roles. You can reach me at zivsxdev@gmail.com or +91 9407921078.",
   },
 ];
 
