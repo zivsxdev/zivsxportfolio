@@ -550,6 +550,9 @@ video {
 .flex {
   display: flex;
 }
+.inline-flex {
+  display: inline-flex;
+}
 .grid {
   display: grid;
 }
@@ -821,8 +824,8 @@ body::before {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
-  .md\:\!grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  .md\:\!grid-cols-\[1\.4fr_1fr\] {
+    grid-template-columns: 1.4fr 1fr !important;
   }
 
   .md\:\!grid-cols-\[1fr_2fr\] {
@@ -831,6 +834,10 @@ body::before {
 
   .md\:\!grid-cols-\[60px_1fr_180px\] {
     grid-template-columns: 60px 1fr 180px !important;
+  }
+
+  .md\:\!grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
   .md\:\!flex-col {
@@ -857,11 +864,15 @@ body::before {
     gap: 3rem !important;
   }
 
-  .md\:\!gap-16 {
-    gap: 4rem !important;
+  .md\:\!gap-20 {
+    gap: 5rem !important;
   }
 
   .md\:\!gap-24 {
     gap: 6rem !important;
+  }
+
+  .md\:\!gap-16 {
+    gap: 4rem !important;
   }
 }

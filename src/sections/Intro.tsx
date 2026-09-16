@@ -58,7 +58,7 @@ export default function Intro() {
             Taukil Ahmed
           </p>
           <p className="label-sm" style={{ opacity: 0.45, marginBottom: "1.25rem" }}>
-            SAP ABAP Developer · Full-Stack Engineer
+            SAP ABAP Developer · Frontend Engineer
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
@@ -66,7 +66,7 @@ export default function Intro() {
               { label: "Email", val: "zivsxdev@gmail.com", href: "mailto:zivsxdev@gmail.com" },
               { label: "Phone", val: "+91 9407921078" },
               { label: "GitHub", val: "github.com/zivsxdev", href: "https://github.com/zivsxdev" },
-              { label: "Location", val: "Korba, Chhattisgarh, India" },
+              { label: "Location", val: "Korea, Chhattisgarh, India" },
             ].map(({ label, val, href }) => (
               <div key={label} style={{ display: "flex", gap: "1rem", alignItems: "baseline", flexWrap: "wrap" }}>
                 <span className="label-sm" style={{ opacity: 0.38, minWidth: "65px" }}>{label}</span>
@@ -76,6 +76,7 @@ export default function Intro() {
                   : <span style={{ fontSize: "0.75rem", opacity: 0.7 }}>{val}</span>}
               </div>
             ))}
+            
           </div>
         </motion.div>
 
@@ -131,7 +132,7 @@ export default function Intro() {
 
           <Section label="EDUCATION">
             {[
-              { degree: "B.Tech — Mechanical Engineering", inst: "VEC Ambikapur (CSVTU)", year: "2022" },
+              { degree: "B.Tech — Mechanical Engineering", inst: "VEC Ambikapur (CSVTU)",  },
               { degree: "Full Stack Development Certification", inst: "AlmaBetter", year: "2025" },
               { degree: "SAP ABAP Development Training", inst: "Remote — Noida", year: "2026 (Ongoing)" },
               { degree: "TCS iON NQT — IT", inst: "Score: 1955.84 / 3000 (65%)", year: "Feb 2026" },
@@ -176,13 +177,12 @@ export default function Intro() {
             ))}
           </Section>
 
-          <Section label="FULL-STACK SKILLS">
+          <Section label="FRONTEND SKILLS">
             {[
               "Python",
               "Next.js / React",
-              "TypeScript / JavaScript",
+              "JavaScript",
               "Node.js / Express",
-              "PostgreSQL / MongoDB",
               "TailwindCSS",
               "REST & GraphQL APIs",
               "OpenAI / Claude / Puter.js AI",
@@ -200,11 +200,10 @@ export default function Intro() {
           <Section label="TOOLS">
             {[
               "VS Code — Advanced",
-              "Git / GitHub — Advanced",
+              "GitHub — Advanced",
               "Vercel / Netlify",
               "Postman",
               "Figma — Intermediate",
-              "Docker — Intermediate",
               "JWT Auth",
             ].map((t) => (
               <p key={t} style={{ fontSize: "0.73rem", opacity: 0.58, marginBottom: "0.3rem" }}>{t}</p>
